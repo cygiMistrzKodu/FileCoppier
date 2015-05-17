@@ -16,7 +16,7 @@ public class CoppyThread implements Runnable {
 	}
 
 	public void setDirectory(File directory) {
-		this.directory = directory;
+		this.directory = directory; // thread
 	}
 
 	public File getFile() {
