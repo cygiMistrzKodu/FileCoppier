@@ -83,12 +83,30 @@ public class DropAction implements DropTargetListener {
 					} else {
 
 						
+						if (dropArea.isCoppySelected())
+						{
+						
 						CoppyThread coppyThread = new CoppyThread();
 						coppyThread.setDirectory(directory);
 						coppyThread.setFile(file);
 						
 						Thread thread = new Thread(coppyThread);
 						thread.start();
+						}
+						
+						if (dropArea.isMoveSelected())
+						{
+							System.out.println("Bede przenosil uwaga uwaga");
+							
+							MoveThread moveThread = new MoveThread();
+							moveThread.setDirectory(directory);
+							moveThread.setFile(file);
+							
+							Thread thread = new Thread(moveThread);
+							thread.start();
+							
+							
+						}
 						
 						
 

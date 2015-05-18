@@ -15,6 +15,8 @@ import javax.swing.SwingConstants;
 public class DropArea extends JPanel {
 
 	private JLabel fileNameInfo = new JLabel();
+	private JRadioButton coppyFile;
+	private JRadioButton moveFile;
 
 
 	public DropArea() {
@@ -41,17 +43,20 @@ public class DropArea extends JPanel {
 		
 		
 		
-		JRadioButton coppyFile = new JRadioButton();
+		coppyFile = new JRadioButton();
 		coppyFile.setText("coppy");
 		coppyFile.setSelected(true);
 		
-		JRadioButton moveFile = new JRadioButton();
+		moveFile = new JRadioButton();
 		moveFile.setText("move");
 		
 		
 		ButtonGroup fileOption = new ButtonGroup();
 		fileOption.add(coppyFile);
 		fileOption.add(moveFile);
+		
+		
+		
 		
 	
 		copyOptionPanel.add(coppyFile, BorderLayout.WEST);
@@ -77,6 +82,15 @@ public class DropArea extends JPanel {
 	public void setPopUpMessage(String popUpMessage)
 	{
 		fileNameInfo.setToolTipText(popUpMessage);
+	}
+	
+	public boolean isCoppySelected() {
+		
+		return coppyFile.isSelected();
+	}
+	public boolean isMoveSelected() {
+		
+		return moveFile.isSelected();
 	}
 	
 	
