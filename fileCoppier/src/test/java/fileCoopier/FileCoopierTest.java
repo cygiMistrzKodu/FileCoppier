@@ -8,7 +8,7 @@ public class FileCoopierTest {
 
 	@Test
 	public void SartApplicationTest() {
-		System.out.println("Koloseum bla bla bal"); //df jechalem sobie pociagiem
+		System.out.println("Koloseum bla bla bal"); //df jechalem sobie pociagiem a na pociagu stala lokomotywa
 	}
 
 }
